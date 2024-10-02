@@ -1,10 +1,12 @@
 import cv2
 import numpy as np
-#
+
 # resim=cv2.imread('profil.jpg')
 #
 # cv2.imshow('Image',resim)
 # cv2.waitKey()
+
+#-----------------------------------------------------------------------
 
 #resim = cv2.imread('deneme.png')
 
@@ -16,22 +18,28 @@ import numpy as np
 # cv2.imshow('Kırmızı Bant', resim)
 # cv2.waitKey()
 
+#-----------------------------------------------------------------------
+
 #resim = cv2.imread('deneme.png', cv2.IMREAD_GRAYSCALE)
 # cv2.imshow('Image', resim)
 # cv2.waitKey()
+
+#-----------------------------------------------------------------------
 
 # R, G, B --> Gri
 # gri =(R+G+B)/3
 # gri = 0.59*R + 0.30*G + 0.11*B
 
+#-----------------------------------------------------------------------
+
 # resim = cv2.imread('deneme.png')
 # #deger = resim[100, 100]
 # # deger = resim[200:250, 250:300]
 # # print(deger)
-#
+
 # resim2 = cv2.cvtColor(resim, cv2.COLOR_BGR2GRAY)
 # renkli2 = cv2.cvtColor(resim2, cv2.COLOR_GRAY2BGR)
-#
+
 # print(f"BGR Karşılığı={resim[100,100]}")
 # print(f"Gri Karşılığı={resim2[100,100]}")
 # print(f"Yalancı BGR Karşılığı={renkli2[100,100]}")
