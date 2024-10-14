@@ -14,3 +14,11 @@ yeni_goruntu= np.clip(gri_resim-100,0,255)
 histogram2=cv2.calcHist([yeni_goruntu],[0],None,[256],[0,256])
 plt.bar(range(256),histogram2.flatten())
 plt.show()
+
+# matris sum
+toplam=np.int32(0)
+for x in range(gri_resim.shape[0]):
+    for y in range(gri_resim.shape[1]):
+        toplam+=gri_resim[x][y]
+
+print(f"toplam : {toplam}")
