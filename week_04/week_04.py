@@ -32,5 +32,5 @@ cv2.imshow('Image-2', yeni_resim)
 
 # OpenCV ile histogram germe
 yeni_resim2=cv2.normalize(gri_resim,None,0,255,cv2.NORM_MINMAX)
-cv2.imshow('Image-3', yeni_resim)
+cv2.imshow('Image-3', yeni_resim2)
 cv2.waitKey()

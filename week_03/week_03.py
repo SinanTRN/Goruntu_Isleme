@@ -10,7 +10,7 @@ ortalama,stdSapma= cv2.meanStdDev(resim)
 print(f"ortalama :{ortalama}")
 print(f"standart sapma: {stdSapma}")
 
-enk,enb,enk_yer,enb_yer=cv2.minMaxLoc(resim)
+enk,enb,enk_yer,enb_yer=cv2.minMaxLoc(resim) #en büyük ve en küçük değerleri ve yerlerini bulur
 print(f"enk : {enk} pixel: {enk_yer}")
 print(f"enb : {enb} pixel: {enb_yer}")
 
@@ -37,17 +37,17 @@ cv2.waitKey()
 #             resim[x, y] = resim[x, y]+artis_mik
 #
 #
-# resim = np.clip(resim, 0, 255).astype(np.uint8)
+# resim = np.clip(resim, 0, 255).astype(np.uint8) # Verileri 0-255 arasına sıkıştırın
 # cv2.imshow('resim',resim)
 # cv2.waitKey()
 #
-# histogram = np.zeros(256,dtype=np.uint8)
-#
-# for x in range(resim.shape[0]):
-#     for y in range(resim.shape[1]):
-#         gri_seviye=resim[x][y]
-#         histogram[gri_seviye] = histogram[gri_seviye] + 1
-#
-# plt.plot(histogram)
-# #plt.bar(range(256),histogram.flatten())
-# plt.show()
+histogram = np.zeros(256,dtype=np.uint8)  # Histogramı hesaplamak için bir dizi oluşturun
+
+for x in range(resim.shape[0]):
+    for y in range(resim.shape[1]):
+        gri_seviye=resim[x][y]
+        histogram[gri_seviye] = histogram[gri_seviye] + 1
+
+plt.plot(histogram)
+plt.bar(range(256),histogram.flatten())
+plt.show()
